@@ -91,7 +91,7 @@ orders.addEventListener('click',() =>{
 })
 product.addEventListener('click',() =>{
     unActive()
-	sideBar.querySelector('a:nth-child(3)').classList.add('active')
+	sideBar.querySelector('a:nth-child(4)').classList.add('active')
 	unPaint()
 	paintProducts()
 })
