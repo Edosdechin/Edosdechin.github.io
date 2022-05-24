@@ -39,6 +39,9 @@ const fetchData = async () => {
 		themeToggler.querySelector('span:nth-child(1)').classList.remove('active')
 		themeToggler.querySelector('span:nth-child(2)').classList.add('active')
 		document.body.classList.toggle('dark-theme-variables')
+	}else{
+		themeToggler.querySelector('span:nth-child(1)').classList.add('active')
+		themeToggler.querySelector('span:nth-child(2)').classList.remove('active')
 	}
 	paintDashbord()
 	/*
