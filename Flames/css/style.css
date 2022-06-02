@@ -217,19 +217,19 @@ section#services{
 .services_left{
 	background: var(--color-turquese);
 	padding: 2rem;
-	color: var(--color-1ight);
+	color: var(--color-black);
 }
 
 .services_left h1 {
 	font-size: 7rem;
 	font-weight: 600rem;
-	color: var(--color-white);
+	color: var(--color-black);
 }
 
 .services_left h4{
 	line-height: 1.4;
 	font-weight: 600;
-	color: var(--color-white);
+	color: var(--color-black);
 }
 
 .services_right h2{
@@ -386,4 +386,284 @@ form input,textarea{
 	padding: 0.8rem 1.6rem;
 	border: 1px solid transparent;
 	cursor: pointer;
+}
+
+/* ================= TABLETS ================= */
+
+@media screen and (max-width: 1024px){
+	h1{
+		font-size: 3.6rem;
+	}
+
+	h2{
+		font-size: 1.6rem;
+	}
+
+	.container{
+		width: var(--container-width-md);
+	}
+
+	.lead{
+		margin-top: 0.6rem;
+	}
+
+	/* ================= NAVBAR ================= */
+
+	.nav_container{
+		position: relative;
+		width: 100vw;
+	}
+
+	.nav_logo h3{
+		margin-left: 2rem;
+	}
+
+	.nav_menu{
+		position: fixed;
+		top: 5rem;
+		right: 0;
+		height: fit-content;
+		width: 18rem;
+		flex-direction: column;
+		gap: 0;
+		z-index: 3;
+		display: none;
+		perspective: 400px;
+	}
+
+	.nav_menu li{
+		width: 100%;
+		height: 5.4rem;
+		background: var(--color-black);
+		opacity: 0;
+		animation: flipNavItem 200ms 0s ease forwards;
+		transform-origin: top;
+	}
+
+	.nav_menu li:nth-child(2){
+		animation-delay: 100ms;
+	}
+	.nav_menu li:nth-child(3){
+		animation-delay: 200ms;
+	}
+	.nav_menu li:nth-child(4){
+		animation-delay: 300ms;
+	}
+
+
+
+	@keyframes flipNavItem{
+		from{
+			transform: rotateX(90deg);	
+		}
+		to{
+			transform: rotateX(0deg);
+			opacity: 1;
+		}
+	}
+
+	.nav_menu li a{
+		box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav button{
+		display: inline-block;
+		margin-right: 1.4rem;
+		background: transparent;
+		color: var(--color-white);
+		cursor: pointer;
+		font-size: 2.4rem;
+	}
+
+	nav button#close-menu-btn{
+		display: none;
+	}
+
+	/* ================= HEADER ================= */
+	header{
+		height: 100%;
+		padding: 14rem 0 0;
+	}
+
+	.header_container{
+		align-items: flex-end;
+		height: 100%;
+	}
+
+	.header_left {
+		margin-bottom: 6rem;
+	}
+
+	.header_right{
+		align-self: flex-end;
+		height: 100%;
+	}
+
+	.header_right-bg{
+		width: 30rem;
+		height: 30rem;
+		right: 50%;
+		bottom: 50%;
+		transform: translate(50%, 50%);
+	}
+
+	.header_image{
+		bottom: -1rem;
+		width: 100%;
+	}
+
+	.header_socials{
+		bottom: 4rem;
+		z-index: 1;
+	}
+
+	.header_socials a{
+		color: #42a8a1;
+	}
+
+	/* ================= SERVICES ================= */
+
+	.services_container{
+		grid-template-columns: 1fr;
+	}
+
+	.services_left{
+		display: none;
+	}
+
+	services_cards{
+		gap: 1rem;
+	}
+
+	/* ================= Testimonials ================= */
+
+	.testimonials_container{
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	/* ================= CONTACT ================= */
+
+	.contact_container{
+		gap: 2rem;
+	}
+
+	.contact_socials{
+		font-size: 1.7rem;
+	}
+}
+
+/* ================= PHONES ================= */
+
+@media screen and (max-width: 600px){
+	body{
+		width: var(--container-width-sm);
+	}
+
+	section{
+		padding: 4rem 0;
+		margin: 4rem 0;
+	}
+
+	h1{
+		font-size: 2.8rem;
+	}
+
+	h2{
+		font-size: 1.4rem;
+	}
+
+	h3{
+		font-size: 1.2rem;
+	}
+
+	.btn-lg{
+		font-size: 1rem;
+	}
+
+	.lead{
+		width: var(--container-width-sm);
+	}
+
+	/* ================= NAVBAR ================= */
+
+	nav button{
+		margin: 0;
+		font-size: 1.9rem;
+
+	}
+
+	.nav_logo h3{
+		margin-left: 4px;
+	}
+
+	/* ================= HEADER ================= */
+
+	header{
+		height: 100vh;
+		padding: 0;
+	}
+
+	.header_container{
+		grid-template-columns: 1fr;
+		margin-top: 4.4rem;
+		gap: 0;
+	}
+
+	.header_left{
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.header_left p{
+		margin: 0.5rem 0 1.2rem;
+	}
+
+	.header_image{
+		position: relative;
+		top: -2rem;
+	}
+
+	.header_right-bg{
+		bottom: 36%;
+	}
+
+	.header_socials{
+		position: absolute;
+		z-index: 1;
+		bottom: 11rem;
+	}
+
+	.header_socials a{
+		color: var(--color-primary);
+	}
+
+	/* ================= SERVICES ================= */
+
+	.services_cards{
+		grid-template-columns: 1fr;
+	}
+
+	/* ================= TESTIMONIALS ================= */
+
+	.testimonial{
+		padding: 1rem;
+	}
+
+	/* ================= CONTACT ================= */
+
+	.contact_container{
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		text-align: center;
+	}
+
+	.contact_socials{
+		justify-content: center;
+	}
 }
